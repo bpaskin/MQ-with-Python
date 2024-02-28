@@ -15,7 +15,7 @@ RUN tar -zxvf ${MQCLIENT_FILENAME} \
   && dpkg -i MQClient/ibmmq-gskit_*.deb \ 
   && dpkg -i MQClient/ibmmq-client_*.deb \ 
   && dpkg -i MQClient/ibmmq-sdk_*.deb \
-  && rm -Rf MQClient 9.3.4.1-IBM-MQC-UbuntuLinuxX64.tar.gz
+  && rm -Rf ${MQCLIENT_FILENAME}
 
 RUN  echo "/opt/mqm/lib64" >> /etc/ld.so.conf.d/libc.conf  \
   && echo "/opt/mqm/lib" >> /etc/ld.so.conf.d/libc.conf \
