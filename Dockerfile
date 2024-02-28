@@ -15,7 +15,7 @@ RUN tar -zxvf ${MQCLIENT_FILENAME} \
   && dpkg -i MQClient/ibmmq-gskit_*.deb \ 
   && dpkg -i MQClient/ibmmq-client_*.deb \ 
   && dpkg -i MQClient/ibmmq-sdk_*.deb \
-  && rm -Rf ${MQCLIENT_FILENAME}
+  && rm -Rf ${MQCLIENT_FILENAME} MQClient
 
 RUN  echo "/opt/mqm/lib64" >> /etc/ld.so.conf.d/libc.conf  \
   && echo "/opt/mqm/lib" >> /etc/ld.so.conf.d/libc.conf \
